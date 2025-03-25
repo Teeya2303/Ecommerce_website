@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            /* border:1px solid red; */
+        }
+         html{
+            scroll-behavior: smooth;
+        }
+        section{
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        #s1 {
+           
+            background-image: url(pexels-mikhail-nilov-6706882.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        #s1 h1 {
+            font-size: 50px;
+            font-weight: bolder;
+            filter: drop-shadow(2px 2px 5px black);
+            background: linear-gradient(to bottom,#f46b45,#eea849);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #s1 p {
+            font-size: 40px;
+            font-weight: bolder;
+            filter: drop-shadow(2px 2px 5px black);
+            background: linear-gradient(to bottom,#f46b45,#eea849);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+        @media(max-width:520px){
+            #s1 h1,p{
+                font-size: 30px;
+            }
+            #s1 p{
+                font-size: 20px;
+            }
+        }
+
+        #s2 {
+           
+           padding: 20px;
+            font-size: 20px;
+        }
+        figure img{
+            border-radius: 50%;
+        }
+        #s2 h1 {
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        #s3{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        #d1{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            
+           
+        }
+        #div1{
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+        }
+        @media(max-width:521px){
+            #div1{
+                width: 280px;
+            }
+            #div1 img{
+                width: 279px;
+            }
+            #div1 p{
+                font-size: 18px;
+            }
+        }
+        
+        #div1:hover{
+            transform: scale(1.04);
+            box-shadow: 5px 5px 20px 0px gray;
+           
+        }
+        #s4{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        #s5{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+       #eye-btn-div{
+                position: relative;
+            }
+            #eye-btn-div i{
+                 right:10px;
+                 top:50%;
+                 transform: translateY(-50%);
+            }
+       
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#">
+                <img src="logo1.jpg" alt="logo" width="100px" style="border-radius: 50%" class="align-text-middle">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="mynavbar">
+                <ul class="navbar-nav my-2">
+                    <li class="nav-item">
+                        <a href="#s1" class=" nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#s2" class="nav-link ">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#s3" role="button" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"
+                            aria-expanded="false">SkinCare</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#s3">Moisturizers</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#s3">Sunscreens</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#s3"> Serums</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#s4">Bodycare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#s5">Lipcare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success me-2" type="submit">Search</button>
+                    <button class="btn btn-success" data-bs-target="#mymodal" data-bs-toggle="modal" type="button">Login</button>
+                    <a href="cart.html">
+                        <i class="bi bi-cart text-white mx-3" style="font-size: 26px;"></i>
+                    </a>
+
+                </form>
+            </div>
+        </div>
+
+    </nav>
+
+    <main>
+        <section id="s1">
+            <h1>SERENE</h1>
+            
+            <p>Bringing you a high range of Skincare crafted<br> for radiant, healthy skin.<br>
+                Because your SKIN deserves the best!</p>
+                
+        </section>
+        <section id="s2" class="d-flex flex-column flex-lg-row gap-5 justify-content-center align-items-center">
+            <figure><img src="pexels-shkrabaanthony-5205669.jpg" alt="image" width="280px" height="350px"
+                  class="rounded-pill" ></figure>
+            <div>
+                <p><h1>ABOUT US</h1>
+                    At Serene, we believe skincare is more than just a routine—it’s a ritual of self-care and confidence.<br> Our mission is to create high-quality, skin-loving products powered by nature and backed by science.<br>
+
+                    We are committed to using clean, effective ingredients that nourish, protect, and enhance your natural glow.<br> Whether you're looking for hydration, radiance, or a soothing touch, our carefully crafted formulas cater to all skin types and concerns.<br>
+                    
+                    Transparency, sustainability, and self-love are at the heart of everything we do.<br> Join us on this journey to healthier, happier skin—because you deserve to shine, naturally.
+                    
+                    #GlowWithSERENE✨</p>
+            </div>
+        </section>
+        <section id="s3">
+            
+                <h1>SKINCARE</h1> 
+          
+            
+           
+           
+                <div id="d1">
+                    <a href="sd1.html" id="div1">
+                <div  class="card bg-transparent text-dark  ">
+                    <img src="m1.jpeg" alt="img" class=" rounded-top" width="320px" height="200px">
+                    <div class="card-header">
+                        <h3 class="text-center">Nourishing Moisturizer
+                            </h3>
+                    </div>
+                    <div class="card-body">
+                        <p>With Niacinamide & Hyaluronic Acid</p>
+                    </div>
+                     <div class="card-footer d-flex flex-direction-row justify-content-between">
+                        <h4>₹ 445</h4>
+                        <button type="button" class="btn btn-dark">Click to See</button>
+                    </div>
+                </div>
+            </a>
+            
+    
+            <a href="sd5.html" id="div1">
+            <div  class="card bg-transparent text-dark ">
+                 <img src="s2.jpeg" alt="img" class=" rounded-top" width="320px" height="200px">
+                <div class="card-header">
+                    <h3 class="text-center">Matte Finish Sunscreen
+                       
+                        </h3>
+                </div>
+                <div class="card-body">
+                    <p>SPF 70 Matte finish, sun protection</p>
+                </div>
+                <div class="card-footer d-flex flex-direction-row justify-content-between">
+                    <h4>₹ 554</h4>
+                    <button  type="button" class="btn btn-dark">Click to See</button>
+                </div>
+            </div>
+        </a>
+        
+        <a href="sd8.html" id="div1">
+        <div  class="card bg-transparent text-dark ">
+            <img src="se1.jpeg" alt="img" class=" rounded-top" width="320px" height="200px">
+            <div class="card-header">
+                <h3 class="text-center">Vitamin C Serum
+                    </h3>
+            </div>
+            <div class="card-body">
+                <p>For glowing, even skin tone</p>
+            </div>
+            <div class="card-footer d-flex flex-direction-row justify-content-between">
+                <h4>₹ 456</h4>
+                <button type="button" class="btn btn-dark">Click to See</button>
+            </div>   
+    </div> 
+</a>
+
+    <a href="skincare.html"><button  type="button" class="btn btn-danger">Click to see more Skincare</button></a>
+
+        </section>
+
+        <section id="s4">
+            
+            <h1>BODYCARE</h1> 
+      
+        
+       
+       <div id="d1">
+        <a href="bd1.html" id="div1">
+            <div  class="card bg-transparent text-dark border ">
+                <img src="b1.jpeg" alt="img" class=" rounded-top" width="320px" height="200px">
+                <div class="card-header">
+                    <h3 class="text-center">Moisture Body Lotion
+                       
+                        </h3>
+                </div>
+                <div class="card-body">
+                    <p> Delivers deep cellular moisturization</p>
+                </div>
+                <div class="card-footer d-flex flex-direction-row justify-content-between">
+                    <h4>₹ 445</h4>
+                    <button type="button" class="btn btn-dark">Click to See</button>
+                </div>
+            </div>
+        </a>
+        
+
+        <a href="b2.html" id="div1">
+        <div  class="card bg-transparent text-dark ">
+             <img src="b2.jpeg" alt="img" class=" rounded-top" width="320px" height="200px">
+            <div class="card-header">
+                <h3 class="text-center">Hydrating Body Wash
+                    
+                   
+                    </h3>
+            </div>
+            <div class="card-body">
+                <p>Keeps deeply hydrated for 24 hours</p>
+            </div>
+            <div class="card-footer d-flex flex-direction-row justify-content-between">
+                <h4>₹ 554</h4>
+                <button type="button" class="btn btn-dark">Click to See</button>
+            </div>
+        </div>
+    </a>
+    
+    <a href="bd5.html" id="div1">
+    <div  class="card bg-transparent text-dark border ">
+        <img src="b3.jpeg" alt="img" class=" rounded-top" width="320px" height="200px">
+        <div class="card-header">
+            <h3 class="text-center">Nourishing Body Oil
+               
+                
+                </h3>
+        </div>
+        <div class="card-body">
+            <p> Gives a radiant glow!</p>
+        </div>
+        <div class="card-footer d-flex flex-direction-row justify-content-between">
+            <h4>₹ 456</h4>
+            <button type="button" class="btn btn-dark">Click to See</button>
+        </div>
+</div> 
+</a>
+
+<a href="bodycare.html"><button type="button" class="btn btn-danger">Click to see more BodyCare</button></a>
+
+    </section>
+
+    <section id="s5">
+            
+        <h1>LIPCARE</h1> 
+  
+    
+   
+   <div id="d1">
+    <a href="l1.html" id="div1">
+        <div  class="card bg-transparent text-dark ">
+            <img src="l1.jpeg" alt="img" class=" rounded-top" width="320px" height="200px">
+            <div class="card-header">
+                <h3 class="text-center">Hydrating Lip Balm
+                    </h3>
+            </div>
+            <div class="card-body">
+                <p>With Hyaluronic Acid and peptides</p>
+            </div>
+            <div class="card-footer d-flex flex-direction-row justify-content-between">
+                <h4>₹ 445</h4>
+                <button type="button" class="btn btn-dark">Click to See</button>
+            </div>
+        </div>
+    </a>
+    
+
+    <a href="l2.html"  id="div1">
+    <div class="card bg-transparent text-dark ">
+         <img src="l2.jpeg" alt="img" class=" rounded-top" width="320px" height="200px">
+        <div class="card-header">
+            <h3 class="text-center">Nourishing Lip Balm
+               
+                </h3>
+        </div>
+        <div class="card-body">
+            <p>Nourishes lips </p>
+        </div>
+        <div class="card-footer d-flex flex-direction-row justify-content-between">
+            <h4>₹ 554</h4>
+            <button type="button" class="btn btn-dark">Click to See</button>
+        </div>
+    </div>
+</a>
+
+<a href="l3.html" id="div1">
+<div  class="card bg-transparent text-dark ">
+    <img src="l3.jpeg" alt="img" class=" rounded-top" width="320px" height="200px">
+    <div class="card-header">
+        <h3 class="text-center">Brightening Lip Balm
+            
+            </h3>
+    </div>
+    <div class="card-body">
+        <p>With vitamin C and peptides</p>
+    </div>
+    <div class="card-footer d-flex flex-direction-row justify-content-between">
+        <h4>₹ 456</h4>
+        <button type="button" class="btn btn-dark">Click to See</button>
+    </div>
+
+</div> 
+</a>
+
+<a href="lipcare.html"><button type="button" class="btn btn-danger">Click to see more Lipcare</button></a>
+
+</section>
+
+    </main>
+
+    <div id="mymodal" class="modal fade" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+
+            <div class="modal-content bg-light">
+                <div class="modal-header ">
+                    <div class="d-flex flex-column align-items-center ms-5 px-3">
+                        <i class="bi bi-person-circle" style="font-size:35px; "></i> 
+                    <h1 class="modal-title ">LOGIN</h1>
+                    </div>
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="m-2" id="eye-btn-div" >
+                            <i class="bi bi-person text-primary position-absolute"></i>
+                            <input type="text" placeholder="Enter Username" class="form-control">
+                         </div>
+
+                        <div class="m-2" id="eye-btn-div">
+                            <i id="eye-btn" class="bi bi-eye-slash text-primary position-absolute"></i>
+                            <input id="password" type="password" name="pw" id="ps"
+                        placeholder="Enter Password" class="form-control ">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="log" type="button" class="btn btn-success">Login</button>
+                    <button type="button" class="btn btn-primary" data-bs-target="#mymodal2"
+                        data-bs-toggle="modal">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="mymodal2" class="modal fade" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+
+            <div class="modal-content bg-light">
+                <div class="modal-header">
+                    <h1 class="modal-title ">Registration</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body ">
+                    <form action="#">
+                        <div class="m-2"><input type="text" placeholder=" First Name" class="form-control "> </div>
+                        <div class="m-2"><input type="text" placeholder=" Last Name" class="form-control "> </div>
+                        <div class="m-2"><input type="email" name="email" placeholder="Email Id "
+                                class="form-control "></div>
+                        <div class="m-2">
+                            <input type="password" name="pw" id="ps" placeholder="Password"
+                                class="form-control "></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="register" type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                        data-bs-toggle="modal" data-bs-target="#mymodal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let icon = document.getElementById("eye-btn");
+    let passwordInput = document.getElementById("password");
+icon.addEventListener("click", function() {
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        if (this.classList.contains("bi-eye-slash")) {
+                this.classList.remove("bi-eye-slash");
+                this.classList.add("bi-eye");
+            }
+    } else {
+        passwordInput.type = "password";
+        if (this.classList.contains("bi-eye")) {
+                this.classList.remove("bi-eye");
+                this.classList.add("bi-eye-slash");
+            }
+    }
+});
+let login= document.getElementById("log");
+let regis=document.getElementById("register");
+log.addEventListener("click",function(){
+    alert("Login Successfull");
+});
+regis.addEventListener("click",function(){
+    alert("Registered Successfully");
+});
+</script>
+</html>
