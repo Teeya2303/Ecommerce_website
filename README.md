@@ -1,4 +1,4 @@
-# E-commerce Frontend
+# E-commerce Website
 
 An e-commerce website's frontend, showcasing product listings and a shopping cart interface.
 
